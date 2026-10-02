@@ -1,0 +1,13 @@
+# 九九乘法表
+# 展示: 嵌套 for 循环、字符串拼接、print
+
+print "Multiplication Table (1-9):"
+print "=============================="
+
+for i = 1 to 9 step 1 then
+    let row = ""
+    for j = 1 to 9 step 1 then
+        let row = row + str(i) + "x" + str(j) + "=" + str(i * j) + "  "
+    end
+    print row
+end

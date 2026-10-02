@@ -1,0 +1,30 @@
+# 闭包与高阶函数演示
+# 展示: 闭包、函数作为返回值
+
+def make_counter(start) ->
+    let count = start
+    def increment() ->
+        count = count + 1
+        return count
+    end
+    return increment
+end
+
+def make_multiplier(factor) ->
+    def multiply(x) ->
+        return x * factor
+    end
+    return multiply
+end
+
+print "=== Counter Demo ==="
+let c1 = make_counter(10)
+print str(c1())  # 11
+print str(c1())  # 12
+print str(c1())  # 13
+
+print "=== Multiplier Demo ==="
+let double = make_multiplier(2)
+let triple = make_multiplier(3)
+print "Double of 7: " + str(double(7))
+print "Triple of 7: " + str(triple(7))

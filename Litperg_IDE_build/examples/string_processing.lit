@@ -1,0 +1,28 @@
+# 字符串处理演示
+# 展示: 字符串操作、内置函数 upper/lower/len、列表操作
+
+let text = "Hello, Litperg Language!"
+print "Original: " + text
+print "Length: " + str(len(text))
+print "Uppercase: " + upper(text)
+print "Lowercase: " + lower(text)
+
+# 字符串拆分成字符列表
+let chars = list()
+let i = 0
+while i < len(text) then
+    push(chars, text[i])
+    let i = i + 1
+end
+
+print "First 10 chars as list:"
+print str(chars)
+
+# 反转字符串
+let reversed = ""
+let i = len(text) - 1
+while i >= 0 then
+    let reversed = reversed + text[i]
+    let i = i - 1
+end
+print "Reversed: " + reversed

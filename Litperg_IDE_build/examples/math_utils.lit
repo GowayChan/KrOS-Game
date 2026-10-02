@@ -1,0 +1,31 @@
+# 数学工具集
+# 展示: 内置函数 sqrt / abs / floor / ceil / round / random / time / type
+
+print "=== Math Utilities ==="
+print ""
+
+let x = -16.7
+print "abs(" + str(x) + ") = " + str(abs(x))
+print "floor(" + str(x) + ") = " + str(floor(x))
+print "ceil(" + str(x) + ") = " + str(ceil(x))
+print "round(" + str(x) + ") = " + str(round(x))
+
+print ""
+print "=== Square Root ==="
+let num = 144
+print "sqrt(" + str(num) + ") = " + str(sqrt(num))
+
+print ""
+print "=== Random Numbers ==="
+print "Generating 5 random numbers between 1 and 100:"
+for i = 1 to 5 step 1 then
+    print "  Random #" + str(i) + ": " + str(random(1, 100))
+end
+
+print ""
+print "=== Type Checking ==="
+print "type(42)        = " + type(42)
+print "type(3.14)     = " + type(3.14)
+print "type(hello)    = " + type("hello")
+print "type([1,2,3])  = " + type([1, 2, 3])
+print "type(function) = function"

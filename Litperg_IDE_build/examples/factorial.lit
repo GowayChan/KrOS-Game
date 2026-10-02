@@ -1,0 +1,14 @@
+# 阶乘计算
+# 展示: 函数定义、递归、if-then-end
+
+def fact(n) ->
+    if n <= 1 then
+        return 1
+    end
+    return n * fact(n - 1)
+end
+
+print "Factorial values:"
+for i = 1 to 10 step 1 then
+    print str(i) + "! = " + str(fact(i))
+end

@@ -1,0 +1,5 @@
+let s = []
+push s 1
+push s 2
+print pop(s)
+print len(s)

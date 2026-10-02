@@ -1,0 +1,25 @@
+# 列表排序（冒泡排序）
+# 展示: 列表、索引、for 循环、嵌套循环、break
+
+let numbers = [64, 34, 25, 12, 22, 11, 90, 88, 76, 50, 5, 1]
+print "Original list:"
+print str(numbers)
+
+let n = len(numbers)
+let i = 0
+
+while i < n - 1 then
+    let j = 0
+    while j < n - i - 1 then
+        if numbers[j] > numbers[j + 1] then
+            let temp = numbers[j]
+            let numbers[j] = numbers[j + 1]
+            let numbers[j + 1] = temp
+        end
+        let j = j + 1
+    end
+    let i = i + 1
+end
+
+print "Sorted list:"
+print str(numbers)

@@ -1,0 +1,21 @@
+# 猜数字游戏
+# 展示: 内置函数 random/input/num/str、while 循环、if-elif-else
+
+let secret = random(1, 100)
+let guess = 0
+let attempts = 0
+
+print "I'm thinking of a number between 1 and 100!"
+print "Can you guess it?"
+
+while guess != secret then
+    let guess = num(input("Your guess: "))
+    let attempts = attempts + 1
+    if guess < secret then
+        print "Too low! Try again."
+    elif guess > secret then
+        print "Too high! Try again."
+    else
+        print "Congratulations! You got it in " + str(attempts) + " attempts!"
+    end
+end
